@@ -1,2 +1,4 @@
-number = 3.14159
-print(f"{number:.3f}")
+a = 1
+b = 4
+c = a + b
+print(c)
