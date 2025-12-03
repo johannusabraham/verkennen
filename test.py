@@ -165,50 +165,50 @@ print('')
 time.sleep(1)
 #== kamer3 ==#
 print('Je duwt de deur open en stap een hele lange kamer binnen.')
-print(f'In deze kamer staat een tafel met daarachter een goblin en daarom een zwaard, een schild, een boog,een toverstok en een sleutel.')
+print(f'In deze kamer staat een tafel met daarachter een goblin en daarom een zwaard, een schild, een boog, een toverstok en een sleutel.')
 while player_ruby > 0:
-  if player_ruby > 1:
-    item2 = input('wat wil je?[schild,zwaard,boog,toverstok,sleutel] ')
-    if item2 == 'schild':
-      player_defense += 1
-      player_ruby -= 1
-    elif item2 == 'boog':
-      player_attack += 3
-      player_ruby -= 1
-    elif item2 == 'toverstok':
-      player_attack += 4
-      player_defense -= 1
-      player_health -= 1
-      player_ruby -= 1
-    elif item2 == 'sleutel':
-      heeft_sleutel = True
-      player_ruby -= 2
-  else:
-    player_attack += 2
-    player_health += 1
-    player_ruby -= 1
-  if player_ruby > 0:
-    item = input('wat wil je?[schild = 1,zwaard = 1,boog = 1,toverstok = 1] ')
-    if item == 'schild':
-      player_defense += 1
-      player_ruby -= 1
-    elif item == 'boog':
-      player_attack += 3
-      player_ruby -= 1
-    elif item == 'toverstok':
-      player_attack += 4
-      player_defense -= 1
-      player_health -= 1
-      player_ruby -= 1
-    else:
-      player_attack += 2
-      player_health += 1
-      player_ruby -= 1
+    if player_ruby > 1:
+        item2 = input('wat wil je?[schild = 1,zwaard = 1,boog = 1,toverstok = 1,sleutel = 2] ')
+        if item2 == 'schild':
+            player_defense += 1
+            player_ruby -= 1
+        elif item2 == 'boog':
+            player_attack += 3
+            player_ruby -= 1
+        elif item2 == 'toverstok':
+            player_attack += 4
+            player_defense -= 1
+            player_health -= 1
+            player_ruby -= 1
+        elif item2 == 'sleutel':
+            heeft_sleutel = True
+            player_ruby -= 2
+        else:
+            player_attack += 2
+            player_health += 1
+            player_ruby -= 1    
+    if player_ruby > 0:
+        item = input('wat wil je?[schild = 1,zwaard = 1,boog = 1,toverstok = 1] ')
+        if item == 'schild':
+            player_defense += 1
+            player_ruby -= 1
+        elif item == 'boog':
+            player_attack += 3
+            player_ruby -= 1
+        elif item == 'toverstok':
+            player_attack += 4
+            player_defense -= 1
+            player_health -= 1
+            player_ruby -= 1
+        else:
+            player_attack += 2
+            player_health += 1
+            player_ruby -= 1
 if player_ruby <= 0:
- print('maar nu je geen rubys meer hebt/hebt vraagt de goblin je vriendelijk de kamer te verlaten')
+    print('maar nu je geen rubys meer hebt/hebt vraagt de goblin je vriendelijk te verlaten')
+kamer = 4
 print('')
 time.sleep(1)
-
 # === [kamer 4] === #
 mega_zombie_attack = 2
 mega_zombie_defense = 0
